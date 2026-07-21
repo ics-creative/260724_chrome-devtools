@@ -1,0 +1,90 @@
+.page-shell {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 48px 24px 72px;
+
+  .plans-section {
+    margin-top: 64px;
+  }
+
+  .plans {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    align-items: stretch;
+  }
+
+  .plan-card {
+    display: flex;
+    flex-direction: column;
+    padding: 28px;
+
+    .button {
+      align-self: flex-start;
+      margin-top: auto;
+    }
+  }
+
+  .registration {
+    margin-top: 64px;
+    padding: 36px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr 1fr auto;
+    align-items: flex-end;
+  }
+
+  .submit-button {
+    margin-bottom: 1px;
+  }
+
+  @media (width <= 768px) {
+    padding: 24px 16px 48px;
+
+    .event-header {
+      padding: 28px 22px;
+      border-radius: 8px;
+    }
+
+    .event-title {
+      font-size: 2.5rem;
+    }
+
+    .event-meta {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+    }
+
+    .plans-section,
+    .registration {
+      margin-top: 44px;
+    }
+
+    .plans {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    .plan-card {
+      padding: 24px;
+
+      .button {
+        align-self: stretch;
+      }
+    }
+
+    .registration {
+      padding: 24px;
+    }
+
+    .form-grid {
+      grid-template-columns: 1fr;
+      gap: 18px;
+    }
+
+    .submit-button {
+      margin: 2px 0 0;
+    }
+  }
+}

@@ -1,0 +1,40 @@
+.page-shell {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 48px 24px 72px;
+
+  .plans-section {
+    margin-top: 64px;
+  }
+
+  .plans {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    align-items: stretch;
+  }
+
+  .plan-card {
+    display: flex;
+    flex-direction: column;
+    padding: 28px;
+
+    .button {
+      align-self: flex-start;
+      margin-top: auto;
+    }
+  }
+
+  .registration {
+    margin-top: 64px;
+    padding: 36px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr 1fr auto;
+    align-items: flex-end;
+  }
+
+  .submit-button {
+    margin-bottom: 1px;
+  }
+}

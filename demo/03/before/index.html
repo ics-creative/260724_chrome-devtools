@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>デモ フロントエンド ミートアップ | デモ3 修正前</title>
+    <link rel="stylesheet" href="../../base.css" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <header class="event-header">
+        <p class="eyebrow">Frontend Event 2026</p>
+        <h1 class="event-title">デモ フロントエンド ミートアップ</h1>
+        <p class="event-lead">設計、パフォーマンス、AIとの協働。現場で役立つ知見を共有する1日限りのミートアップです。</p>
+        <ul class="event-meta">
+          <li>2026年9月18日（金）</li>
+          <li>13:00–18:30</li>
+          <li>東京・渋谷ストリームホール</li>
+        </ul>
+      </header>
+
+      <section class="plans-section" aria-labelledby="plans-heading">
+        <h2 class="section-heading" id="plans-heading">参加プラン</h2>
+        <p class="section-lead">参加スタイルに合わせて、3つのプランからお選びください。</p>
+        <ul class="plans">
+          <li class="plan-card"><span class="plan-card__label">ONSITE</span><h3>会場参加</h3><p>会場でセッションを視聴し、登壇者への質問や終了後の交流会にも参加できます。</p><a class="button" href="#registration">このプランを選ぶ</a></li>
+          <li class="plan-card"><span class="plan-card__label">ONLINE</span><h3>オンライン参加</h3><p>ライブ配信でセッションを視聴できます。</p><a class="button" href="#registration">このプランを選ぶ</a></li>
+          <li class="plan-card"><span class="plan-card__label">ARCHIVE</span><h3>アーカイブ視聴</h3><p>開催後に公開される録画を、好きな時間に視聴できます。公開期間は開催後30日間です。</p><a class="button" href="#registration">このプランを選ぶ</a></li>
+        </ul>
+      </section>
+
+      <section class="registration" id="registration" aria-labelledby="registration-heading">
+        <h2 class="section-heading" id="registration-heading">参加申し込み</h2>
+        <p class="section-lead">必要事項を入力してお申し込みください。</p>
+        <form>
+          <div class="form-grid">
+            <div class="field">
+              <label for="name">名前<span class="required">必須</span></label>
+              <input id="name" name="name" type="text" autocomplete="name" />
+            </div>
+            <div class="field">
+              <label for="email">メールアドレス<span class="required">必須</span></label>
+              <input id="email" name="email" type="email" autocomplete="email" />
+            </div>
+            <button class="button submit-button" type="button">申し込む</button>
+          </div>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
