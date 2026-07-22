@@ -1,5 +1,6 @@
 .page-shell {
   width: 100%;
+  min-width: 0;
   max-width: 1120px;
   padding: 48px 24px 72px;
 
@@ -11,23 +12,23 @@
   .plans {
     grid-template-columns: repeat(3, 1fr);
     gap: 8px;
-  }
 
-  .plan-card {
-    display: grid;
-    padding: 14px;
+    .plan-card {
+      display: grid;
+      padding: 14px;
 
-    .button {
-      justify-self: start;
+      .button {
+        justify-self: start;
+      }
     }
   }
 
   .registration {
     padding: 28px;
-  }
 
-  .form-grid {
-    grid-template-columns: 1fr 1fr auto;
-    align-items: flex-end;
+    .form-grid {
+      grid-template-columns: 1fr 1fr auto;
+      align-items: flex-end;
+    }
   }
 }

@@ -1,5 +1,7 @@
 const form = document.querySelector("#registration-form");
-const successMessage = document.querySelector("#success-message");
+const successToast = document.querySelector("#success-toast");
+let displayTimer;
+let transitionTimer;
 
 const fields = [
   {
@@ -31,9 +33,38 @@ function validateField(field) {
   return message === "";
 }
 
+function hideToast(immediately = false) {
+  clearTimeout(displayTimer);
+  clearTimeout(transitionTimer);
+  successToast.classList.remove("is-visible");
+
+  if (immediately) {
+    successToast.hidden = true;
+    return;
+  }
+
+  transitionTimer = setTimeout(() => {
+    successToast.hidden = true;
+  }, 300);
+}
+
+function showToast() {
+  clearTimeout(displayTimer);
+  clearTimeout(transitionTimer);
+  successToast.hidden = false;
+
+  requestAnimationFrame(() => {
+    successToast.classList.add("is-visible");
+  });
+
+  displayTimer = setTimeout(() => {
+    hideToast();
+  }, 3000);
+}
+
 form.addEventListener("submit", (event) => {
   event.preventDefault();
-  successMessage.hidden = true;
+  hideToast(true);
 
   const results = fields.map(validateField);
   const firstInvalidField = fields.find((_, index) => !results[index]);
@@ -43,6 +74,6 @@ form.addEventListener("submit", (event) => {
     return;
   }
 
-  successMessage.hidden = false;
-  successMessage.focus();
+  form.reset();
+  showToast();
 });

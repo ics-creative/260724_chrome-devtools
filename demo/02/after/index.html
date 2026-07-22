@@ -35,10 +35,6 @@
         <h2 class="section-heading" id="registration-heading">参加申し込み</h2>
         <p class="section-lead">必要事項を入力してお申し込みください。</p>
         <form id="registration-form" novalidate>
-          <div class="success-message" id="success-message" role="status" tabindex="-1" hidden>
-            <h3>お申し込みありがとうございます</h3>
-            <p>申し込みが完了しました。</p>
-          </div>
           <div class="form-grid">
             <div class="field">
               <label for="name">名前<span class="required">必須</span></label>
@@ -55,5 +51,9 @@
         </form>
       </section>
     </main>
+
+    <div class="toast" id="success-toast" role="status" aria-live="polite" aria-atomic="true" hidden>
+      申し込みが完了しました。
+    </div>
   </body>
 </html>
