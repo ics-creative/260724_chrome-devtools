@@ -6,7 +6,3 @@
 - `margin` で余白を設ける場合は、`margin-bottom` または `margin-right` を使用してください。
 - 横並びのレイアウトには、まず CSS Grid を使用してください。Grid での再現が難しい場合に Flexbox を検討してください。
 - 関連するセレクタは、CSSネスト記法を使用して親セレクタ内に記述してください。
-
-## HTML
-
-- 必須項目には `aria-required="true"` を指定してください。
