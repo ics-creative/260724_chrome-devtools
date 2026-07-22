@@ -1,17 +1,14 @@
 const form = document.querySelector("#registration-form");
-const formPanel = document.querySelector("#form-panel");
 const successMessage = document.querySelector("#success-message");
-const nameInput = document.querySelector("#name");
-const emailInput = document.querySelector("#email");
 
 const fields = [
   {
-    input: nameInput,
+    input: document.querySelector("#name"),
     error: document.querySelector("#name-error"),
     emptyMessage: "名前を入力してください。",
   },
   {
-    input: emailInput,
+    input: document.querySelector("#email"),
     error: document.querySelector("#email-error"),
     emptyMessage: "メールアドレスを入力してください。",
     invalidMessage: "メールアドレスの形式を確認してください。",
@@ -30,19 +27,13 @@ function validateField(field) {
 
   field.error.textContent = message;
   field.input.setAttribute("aria-invalid", String(message !== ""));
-  return message === "";
-}
 
-for (const field of fields) {
-  field.input.addEventListener("input", () => {
-    if (field.input.getAttribute("aria-invalid") === "true") {
-      validateField(field);
-    }
-  });
+  return message === "";
 }
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
+  successMessage.hidden = true;
 
   const results = fields.map(validateField);
   const firstInvalidField = fields.find((_, index) => !results[index]);
@@ -52,7 +43,6 @@ form.addEventListener("submit", (event) => {
     return;
   }
 
-  formPanel.hidden = true;
   successMessage.hidden = false;
   successMessage.focus();
 });

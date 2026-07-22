@@ -3,9 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>デモ フロントエンド ミートアップ | デモ2 修正後</title>
+    <title>デモ フロントエンド ミートアップ | デモ2 修正前</title>
     <link rel="stylesheet" href="../../base.css" />
     <link rel="stylesheet" href="./style.css" />
+    <script src="./main.js" defer></script>
   </head>
   <body>
     <main class="page-shell">
@@ -24,41 +25,32 @@
         <h2 class="section-heading" id="plans-heading">参加プラン</h2>
         <p class="section-lead">参加スタイルに合わせて、3つのプランからお選びください。</p>
         <ul class="plans">
-          <li class="plan-card">
-            <span class="plan-card__label">ONSITE</span>
-            <h3>会場参加</h3>
-            <p>会場でセッションを視聴し、登壇者への質問や終了後の交流会にも参加できます。</p>
-            <a class="button" href="#registration">このプランを選ぶ</a>
-          </li>
-          <li class="plan-card">
-            <span class="plan-card__label">ONLINE</span>
-            <h3>オンライン参加</h3>
-            <p>ライブ配信でセッションを視聴できます。</p>
-            <a class="button" href="#registration">このプランを選ぶ</a>
-          </li>
-          <li class="plan-card">
-            <span class="plan-card__label">ARCHIVE</span>
-            <h3>アーカイブ視聴</h3>
-            <p>開催後に公開される録画を、好きな時間に視聴できます。公開期間は開催後30日間です。</p>
-            <a class="button" href="#registration">このプランを選ぶ</a>
-          </li>
+          <li class="plan-card"><span class="plan-card__label">ONSITE</span><h3>会場参加</h3><p>会場でセッションを視聴し、登壇者への質問や終了後の交流会にも参加できます。</p><a class="button" href="#registration">このプランを選ぶ</a></li>
+          <li class="plan-card"><span class="plan-card__label">ONLINE</span><h3>オンライン参加</h3><p>ライブ配信でセッションを視聴できます。</p><a class="button" href="#registration">このプランを選ぶ</a></li>
+          <li class="plan-card"><span class="plan-card__label">ARCHIVE</span><h3>アーカイブ視聴</h3><p>開催後に公開される録画を、好きな時間に視聴できます。公開期間は開催後30日間です。</p><a class="button" href="#registration">このプランを選ぶ</a></li>
         </ul>
       </section>
 
       <section class="registration" id="registration" aria-labelledby="registration-heading">
         <h2 class="section-heading" id="registration-heading">参加申し込み</h2>
         <p class="section-lead">必要事項を入力してお申し込みください。</p>
-        <form>
+        <form id="registration-form" novalidate>
+          <div class="success-message" id="success-message" role="status" tabindex="-1" hidden>
+            <h3>お申し込みありがとうございます</h3>
+            <p>申し込みが完了しました。</p>
+          </div>
           <div class="form-grid">
             <div class="field">
               <label for="name">名前<span class="required">必須</span></label>
-              <input id="name" name="name" type="text" autocomplete="name" />
+              <input id="name" name="name" type="text" autocomplete="name" aria-describedby="name-error" aria-required="true" required />
+              <p class="field-error" id="name-error" aria-live="polite"></p>
             </div>
             <div class="field">
               <label for="email">メールアドレス<span class="required">必須</span></label>
-              <input id="email" name="email" type="email" autocomplete="email" />
+              <input id="email" name="email" type="email" autocomplete="email" aria-describedby="email-error" aria-required="true" required />
+              <p class="field-error" id="email-error" aria-live="polite"></p>
             </div>
-            <button class="button submit-button" type="button">申し込む</button>
+            <button class="button submit-button" type="submit">申し込む</button>
           </div>
         </form>
       </section>

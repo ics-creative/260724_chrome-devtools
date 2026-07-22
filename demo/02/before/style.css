@@ -1,40 +1,35 @@
 .page-shell {
-  width: 1120px;
-  margin: 0 auto;
-  padding: 48px 0 72px;
+  width: 100%;
+  max-width: 1120px;
+  padding: 48px 24px 72px;
 
+  .event-header,
   .plans-section {
-    margin-top: 64px;
+    margin-bottom: 42px;
   }
 
   .plans {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 24px;
-    align-items: stretch;
+    grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
+    gap: 8px;
   }
 
   .plan-card {
-    display: flex;
-    flex-direction: column;
-    padding: 28px;
+    display: grid;
+    grid-row: span 4;
+    grid-template-rows: subgrid;
+    padding: 14px;
 
     .button {
-      align-self: flex-start;
-      margin-top: auto;
+      justify-self: start;
     }
   }
 
   .registration {
-    margin-top: 64px;
-    padding: 36px;
+    padding: 28px;
   }
 
   .form-grid {
     grid-template-columns: 1fr 1fr auto;
     align-items: flex-end;
-  }
-
-  .submit-button {
-    margin-bottom: 1px;
   }
 }
