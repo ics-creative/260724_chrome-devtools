@@ -30,14 +30,9 @@
 
     .form-grid {
       grid-template-columns: 1fr 1fr auto;
-      grid-template-rows: auto 50px auto;
-      align-items: flex-start;
+      align-items: flex-end;
 
       .field {
-        display: grid;
-        grid-row: span 3;
-        grid-template-rows: subgrid;
-
         input[aria-invalid="true"] {
           border-color: var(--color-error);
           background: var(--color-error-soft);
@@ -45,25 +40,6 @@
 
         .field-error:empty {
           display: none;
-        }
-      }
-
-      .submit-button {
-        grid-row: 2;
-      }
-
-      @media (width <= 768px) {
-        grid-template-columns: 1fr;
-        grid-template-rows: none;
-        gap: 12px;
-
-        .field {
-          display: block;
-          grid-row: auto;
-        }
-
-        .submit-button {
-          grid-row: auto;
         }
       }
     }
