@@ -42,6 +42,10 @@
           display: none;
         }
       }
+
+      @media (width <= 768px) {
+        grid-template-columns: 1fr;
+      }
     }
   }
 }

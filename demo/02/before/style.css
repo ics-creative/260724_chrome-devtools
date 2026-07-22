@@ -31,6 +31,10 @@
     .form-grid {
       grid-template-columns: 1fr 1fr auto;
       align-items: flex-end;
+
+      @media (width <= 768px) {
+        grid-template-columns: 1fr;
+      }
     }
   }
 }
