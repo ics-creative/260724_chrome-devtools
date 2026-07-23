@@ -4,8 +4,7 @@
   max-width: 1120px;
   padding: 48px 24px 72px;
 
-  .event-header,
-  .plans-section {
+  .event-header {
     margin-bottom: 42px;
   }
 
@@ -21,19 +20,6 @@
 
       .button {
         justify-self: start;
-      }
-    }
-  }
-
-  .registration {
-    padding: 28px;
-
-    .form-grid {
-      grid-template-columns: 1fr 1fr auto;
-      align-items: flex-end;
-
-      @media (width <= 768px) {
-        grid-template-columns: 1fr;
       }
     }
   }
