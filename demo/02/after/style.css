@@ -4,25 +4,8 @@
   max-width: 1120px;
   padding: 48px 24px 72px;
 
-  .event-header,
-  .plans-section {
+  .event-header {
     margin-bottom: 42px;
-  }
-
-  .plans {
-    grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
-    gap: 8px;
-
-    .plan-card {
-      display: grid;
-      grid-row: span 4;
-      grid-template-rows: subgrid;
-      padding: 14px;
-
-      .button {
-        justify-self: start;
-      }
-    }
   }
 
   .registration {
@@ -30,7 +13,7 @@
 
     .form-grid {
       grid-template-columns: 1fr 1fr auto;
-      align-items: flex-end;
+      align-items: start;
 
       .field {
         input[aria-invalid="true"] {
@@ -39,12 +22,21 @@
         }
 
         .field-error:empty {
-          display: none;
+          visibility: hidden;
         }
+      }
+
+      .submit-area {
+        display: grid;
+        padding-top: 34px;
       }
 
       @media (width <= 768px) {
         grid-template-columns: 1fr;
+
+        .submit-area {
+          padding-top: 0;
+        }
       }
     }
   }

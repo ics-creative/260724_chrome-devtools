@@ -54,12 +54,13 @@ function showToast() {
   successToast.hidden = false;
 
   requestAnimationFrame(() => {
-    successToast.classList.add("is-visible");
+    requestAnimationFrame(() => {
+      successToast.classList.add("is-visible");
+      displayTimer = setTimeout(() => {
+        hideToast();
+      }, 3000);
+    });
   });
-
-  displayTimer = setTimeout(() => {
-    hideToast();
-  }, 3000);
 }
 
 form.addEventListener("submit", (event) => {
@@ -75,5 +76,9 @@ form.addEventListener("submit", (event) => {
   }
 
   form.reset();
+  fields.forEach((field) => {
+    field.error.textContent = "";
+    field.input.setAttribute("aria-invalid", "false");
+  });
   showToast();
 });
