@@ -2,12 +2,12 @@
 
 ## デモ一覧と各ファイル
 
-ルートの[index.html](https://ics-creative.github.io/260724_chrome-devtools/)をブラウザで開くと、すべてのデモへ移動できます。
+ルートの[index.html](https://ics-creative.github.io/260727_chrome-devtools/)をブラウザで開くと、すべてのデモへ移動できます。
 
 | デモ | 修正前 | 修正後 |
 | --- | --- | --- |
-| 1. PC向けカードレイアウト | [ページを開く](https://ics-creative.github.io/260724_chrome-devtools/demo/01/before/index.html) | [ページを開く](https://ics-creative.github.io/260724_chrome-devtools/demo/01/after/index.html) |
-| 2. フォームの実装 | [ページを開く](https://ics-creative.github.io/260724_chrome-devtools/demo/02/before/index.html) | [ページを開く](https://ics-creative.github.io/260724_chrome-devtools/demo/02/after/index.html) |
+| 1. PC向けカードレイアウト | [ページを開く](https://ics-creative.github.io/260727_chrome-devtools/demo/01/before/index.html) | [ページを開く](https://ics-creative.github.io/260727_chrome-devtools/demo/01/after/index.html) |
+| 2. フォームの実装 | [ページを開く](https://ics-creative.github.io/260727_chrome-devtools/demo/02/before/index.html) | [ページを開く](https://ics-creative.github.io/260727_chrome-devtools/demo/02/after/index.html) |
 
 ## AIエージェントへ渡すプロンプト
 
